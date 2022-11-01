@@ -57,8 +57,16 @@ class _MyAppState extends State<MyApp> {
 
   void setupAudio() {
     List<AudioInfo> _list = [];
-    list.forEach((item) => _list.add(AudioInfo(item["url"],
-        title: item["title"], desc: item["desc"], coverUrl: item["coverUrl"])));
+    list.forEach(
+      (item) => _list.add(
+        AudioInfo(
+          item["url"],
+          title: item["title"],
+          desc: item["desc"],
+          coverUrl: item["coverUrl"],
+        ),
+      ),
+    );
 
     AudioManager.instance.audioList = _list;
     AudioManager.instance.intercepter = true;
